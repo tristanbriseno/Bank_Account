@@ -33,3 +33,21 @@ def new_acc_num():
         else:
             self.balance -= amount
             print(f"Your have withdrawn: ${amount}")
+
+    
+    def get_balance(self):
+        print(f"Your current balance is: ${self.balance}")
+        return self.balance
+
+
+    #interest
+    def add_interest(self):
+        self.balance += (self.balance*0.00083)
+   
+
+
+    def print_reciept(self):
+        print(self.full_name)
+        print(f"Acc number ending in: {str(self.account_num)[slice(3, -1)]}")
+        print(f"Routing Number: {self.routing_num}")
+        print(f"Current balance: ${self.balance}")
