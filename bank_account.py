@@ -4,9 +4,10 @@ from random import *
 def new_acc_num():
     return randrange(10000000, 99999999)
     #creates an account number
-    
-     
-    class BankAccount:
+
+
+
+class BankAccount:
 
     #Provided BankAccount with attributes
     def __init__(self, full_name, routing_num, balance=0):
@@ -18,7 +19,7 @@ def new_acc_num():
 
 
 
-         #this is the deposit function
+    #this is the deposit function
     def deposit(self, amount):
         self.balance += amount
         print(f"You have deposited: ${amount}")
@@ -34,7 +35,8 @@ def new_acc_num():
             self.balance -= amount
             print(f"Your have withdrawn: ${amount}")
 
-    
+
+    #this will return and then print your balance
     def get_balance(self):
         print(f"Your current balance is: ${self.balance}")
         return self.balance
@@ -51,3 +53,27 @@ def new_acc_num():
         print(f"Acc number ending in: {str(self.account_num)[slice(3, -1)]}")
         print(f"Routing Number: {self.routing_num}")
         print(f"Current balance: ${self.balance}")
+
+
+
+#Malachi's account
+Malachi=BankAccount("Malachi R", 12345678)
+Malachi.withdraw(250)
+Malachi.get_balance()
+Malachi.print_reciept()
+print("Have a Nice day!!!")
+print("")
+
+#Mason's account
+Mason=BankAccount("Mason G", 12345678, 3000)
+Mason.add_interest()
+Mason.print_reciept()
+print("Have a Nice day!!!")
+print("")
+
+#clayton's account
+Clayton=BankAccount("Clayton S", 12345678)
+Clayton.deposit(47000)
+Clayton.print_reciept()
+print("Have a Nice day!!!")
+print("")
